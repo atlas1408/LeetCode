@@ -6,7 +6,7 @@ def sortAbsoluteValues(root):
 	def rec(prev, curr):
 		if not curr:
 			return
-		if curr.val<0:
+		if curr.val < 0:
 			_next = curr
 			prev.next = prev.next.next
 			_next.next = newL
@@ -19,6 +19,6 @@ def sortAbsoluteValues(root):
 	while temp and temp.next!= None:
 		temp = temp.next
 	if temp:
-		temp.next.next = newH.next
+		temp.next = newH.next
 		return newL
-	return newH
+	return newH.next
